@@ -33,21 +33,5 @@
     <div class="vr">&nbsp;</div>
    
 </div>
-
- <!-- <div class="middle"> 
-        <table>
-                <tr>
-                  <td colspan=2 >
-                    <br/>
-                  </td>
-                </tr>
-                <tr>
-                  
-                  <td>
-                    Total Client
-                  </td>
-                </tr>
-              </table>
- </div> -->
 </body>
 </html>

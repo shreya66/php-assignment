@@ -4,40 +4,35 @@ $conn=mysqli_connect("localhost","root","","php");
 //$echo = ""; 
  if(isset($_POST['submit']))
  {
-  
-
-  $image = $_FILES['image']['name'];
-  
-
-  	// image file directory
-  	$target = "upload/".basename($image);
+   $image = $_FILES['image']['name'];
+  // image file directory
+$target = "upload/".basename($image);
     
 
-   if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
+if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
 	  echo "File is valid, and was successfully uploaded.\n";
-	} else {
-	   echo "Upload failed";
-	}
+    } 
+  else
+    {
 
-	
-   $name=$_POST['name'];
-   
-   $mobile=$_POST['mobile'];
-   $email=$_POST['email'];
-   $gender=$_POST['gender'];
-   $country=$_POST['country'];
-   $state=$_POST['state'];
-   $city=$_POST['city'];
-  // $target = $_POST['image'];
-   $address=$_POST['address'];
+	   echo "Upload failed";
+    }
+
+ $name=$_POST['name'];
+ $mobile=$_POST['mobile'];
+ $email=$_POST['email'];
+ $gender=$_POST['gender'];
+ $country=$_POST['country'];
+ $state=$_POST['state'];
+ $city=$_POST['city'];
+// $target = $_POST['image'];
+ $address=$_POST['address'];
   // $pincode=$_POST['pincode'];
 
-   $query="UPDATE customer SET name='$name', mobile='$mobile', email='$email', gender='$gender', country='$country', state='$state', city='$city', address='$address',image='$target' WHERE id=7";
+ $query="UPDATE customer SET name='$name', mobile='$mobile', email='$email', gender='$gender', country='$country', state='$state', city='$city', address='$address',image='$target' WHERE id=7";
 	
 // execute query
-    $run=mysqli_query($conn,$query);
-   
-   
+$run=mysqli_query($conn,$query);
    if($run)
    {
      echo "Data updated Sucessfully";
@@ -49,9 +44,6 @@ $conn=mysqli_connect("localhost","root","","php");
    
  }
  ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

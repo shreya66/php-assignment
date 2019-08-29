@@ -22,7 +22,7 @@ die("ERROR: Could not connect. " . mysqli_connect_error());
 
   </tr >
 
-  <?php
+ <?php
 
       //SQL Query for fetching the data
      $q = "select id, name, mobile, email, gender from customer WHERE status = 0";
@@ -51,6 +51,6 @@ die("ERROR: Could not connect. " . mysqli_connect_error());
      $numberOfRows = mysqli_num_rows($query);
     echo "<h4 style='text-align: center;'>Total Number Of Customers = ".$numberOfRows."</h4>";
             
-  ?>
+ ?>
 
 </table>
