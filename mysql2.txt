@@ -1,0 +1,25 @@
+
+
+2)	List of all users and product which has been purchased sports or electronics category product in last month
+
+query- select u_name,p_name from user join product on user.p_id=product.p_id where c_id=1 or c_id=2
+
+
+3)	List of All users who has paid for single order more than 5000 Rs
+
+query-select u_name,u_id from user join product on user.p_id=product.p_id where p_rate>5000
+
+
+4)	Total amount for all orders made by a user
+
+query- select SUM(p_rate) from product
+
+
+5)	List of all product having price more than 100 Rs and less than 300 Rs
+
+query- select p_name from product where p_rate between 300 and 40000
+
+
+6)	List of all product having discount more than 20%
+
+query- select p_name from product where p_discount>20
